@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/sbylib-assimp-example
+sbylib-assimp-example.so
+sbylib-assimp-example.dylib
+sbylib-assimp-example.dll
+sbylib-assimp-example.a
+sbylib-assimp-example.lib
+sbylib-assimp-example-test-*
+*.exe
+*.o
+*.obj
+*.lst

@@ -1,0 +1,11 @@
+name "sbylib-assimp"
+description "A minimal D application."
+authors "sobaya"
+copyright "Copyright © 2019, sobaya"
+license "proprietary"
+
+targetType "library"
+targetPath "lib"
+
+dependency "derelict-assimp3" version="~>2.0.0-beta.1"
+dependency "sbylib-math" version="*"
