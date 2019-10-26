@@ -1,6 +1,6 @@
 module sbylib.wrapper.assimp.functions;
 
-import derelict.assimp3.types;
+import bindbc.assimp.types;
 import sbylib.math : vec2, vec3, vec4, quat, mat4;
 
 string toRegularString(aiString str) {
@@ -57,6 +57,11 @@ auto toArray(alias postProcess, T)(uint len, T* data) {
     }
 
     return Result(len, data);
+}
+
+E toEnum(E, O)(O o) {
+    import std : asOriginalType, to;
+    return o.asOriginalType.to!E;
 }
 
 string indent(string str) {

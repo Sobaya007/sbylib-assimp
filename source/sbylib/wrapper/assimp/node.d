@@ -1,6 +1,6 @@
 module sbylib.wrapper.assimp.node;
 
-import derelict.assimp3.types;
+import bindbc.assimp.types;
 import sbylib.wrapper.assimp.mesh : Mesh;
 import sbylib.wrapper.assimp.metadata : MetaData;
 import sbylib.wrapper.assimp.functions : toRegularString, toSbylibMatrix, toArray;

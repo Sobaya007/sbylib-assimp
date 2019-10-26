@@ -1,6 +1,6 @@
 module sbylib.wrapper.assimp.quatkey;
 
-import derelict.assimp3.types;
+import bindbc.assimp.types;
 import sbylib.wrapper.assimp.functions : toSbylibQuaternion;
 import sbylib.math : quat;
 

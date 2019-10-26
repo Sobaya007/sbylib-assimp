@@ -1,6 +1,6 @@
 module sbylib.wrapper.assimp.animation;
 
-import derelict.assimp3.types;
+import bindbc.assimp.types;
 import sbylib.wrapper.assimp.functions : toRegularString, toArray;
 import sbylib.wrapper.assimp.nodeanim : NodeAnim;
 import sbylib.wrapper.assimp.meshanim : MeshAnim;

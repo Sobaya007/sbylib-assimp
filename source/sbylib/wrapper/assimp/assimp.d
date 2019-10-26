@@ -1,8 +1,7 @@
 module sbylib.wrapper.assimp.assimp;
 
 public import sbylib.wrapper.assimp.constants : DefaultLogStream;
-import derelict.assimp3.assimp;
-import derelict.assimp3.types;
+import bindbc.assimp;
 
 class Assimp {
 
@@ -14,7 +13,10 @@ static:
         if (initialized) return;
         initialized = true;
 
-        DerelictASSIMP3.load("libassimp.so.4");
+        version(BindAssimp_Static) {}
+        else {
+            loadAssimp("libassimp.so.5");
+        }
     }
 
     uint[3] getVersion() {

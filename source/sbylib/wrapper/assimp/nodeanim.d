@@ -1,8 +1,8 @@
 module sbylib.wrapper.assimp.nodeanim;
 
-import derelict.assimp3.types;
+import bindbc.assimp.types;
 import sbylib.wrapper.assimp.constants : AnimBehaviour;
-import sbylib.wrapper.assimp.functions : toRegularString, toArray;
+import sbylib.wrapper.assimp.functions : toRegularString, toArray, toEnum;
 import sbylib.wrapper.assimp.vectorkey : VectorKey;
 import sbylib.wrapper.assimp.quatkey : QuatKey;
 
@@ -30,14 +30,10 @@ struct NodeAnim {
     }
 
     auto preState() {
-        import std.conv : to;
-
-        return node.mPreState.to!AnimBehaviour;
+        return node.mPreState.toEnum!AnimBehaviour;
     }
 
     auto postState() {
-        import std.conv : to;
-
-        return node.mPostState.to!AnimBehaviour;
+        return node.mPostState.toEnum!AnimBehaviour;
     }
 }

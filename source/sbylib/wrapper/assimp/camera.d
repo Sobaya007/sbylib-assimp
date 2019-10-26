@@ -1,6 +1,6 @@
 module sbylib.wrapper.assimp.camera;
 
-import derelict.assimp3.types;
+import bindbc.assimp.types;
 import sbylib.wrapper.assimp.functions : toRegularString, toSbylibVector;
 import sbylib.math : vec3;
 

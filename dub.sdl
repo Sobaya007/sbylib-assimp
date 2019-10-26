@@ -7,5 +7,5 @@ license "proprietary"
 targetType "library"
 targetPath "lib"
 
-dependency "derelict-assimp3" version="~>2.0.0-beta.1"
+dependency "bindbc-assimp" path="../../bindbc-assimp"
 dependency "sbylib-math" version="*"

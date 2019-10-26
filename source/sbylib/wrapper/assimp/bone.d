@@ -1,6 +1,6 @@
 module sbylib.wrapper.assimp.bone;
 
-import derelict.assimp3.types;
+import bindbc.assimp.types;
 import sbylib.wrapper.assimp.functions : toRegularString, toSbylibMatrix, toArray;
 import sbylib.wrapper.assimp.vertexweight : VertexWeight;
 import sbylib.math : mat4;

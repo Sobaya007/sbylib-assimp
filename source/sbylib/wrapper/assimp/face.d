@@ -1,6 +1,6 @@
 module sbylib.wrapper.assimp.face;
 
-import derelict.assimp3.types;
+import bindbc.assimp.types;
 
 struct Face {
 

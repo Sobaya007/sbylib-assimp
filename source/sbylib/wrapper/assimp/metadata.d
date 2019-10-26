@@ -1,8 +1,8 @@
 module sbylib.wrapper.assimp.metadata;
 
-import derelict.assimp3.types;
+import bindbc.assimp.types;
 import sbylib.wrapper.assimp.constants : MetaDataType;
-import sbylib.wrapper.assimp.functions : toRegularString, toSbylibVector;
+import sbylib.wrapper.assimp.functions : toRegularString, toSbylibVector, toEnum;
 import sbylib.math : vec3;
 
 struct MetaData {
@@ -45,9 +45,7 @@ struct MetaDataEntry {
     private const aiMetadataEntry entry;
 
     MetaDataType type() {
-        import std.conv : to;
-
-        return entry.mType.to!MetaDataType;
+        return entry.mType.toEnum!MetaDataType;
     }
 
     auto data(Type)() {

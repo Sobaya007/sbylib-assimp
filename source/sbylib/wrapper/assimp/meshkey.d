@@ -1,6 +1,6 @@
 module sbylib.wrapper.assimp.meshkey;
 
-import derelict.assimp3.types;
+import bindbc.assimp.types;
 import sbylib.wrapper.assimp.functions : toRegularString, toArray;
 
 struct MeshKey {

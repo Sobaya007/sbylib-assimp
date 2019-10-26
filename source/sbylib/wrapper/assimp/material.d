@@ -1,8 +1,8 @@
 module sbylib.wrapper.assimp.material;
 
-import derelict.assimp3.types;
+import bindbc.assimp.types;
 import sbylib.wrapper.assimp.constants : PropertyTypeInfo;
-import sbylib.wrapper.assimp.functions : toRegularString, toArray;
+import sbylib.wrapper.assimp.functions : toRegularString, toArray, toEnum;
 
 struct Material {
 
@@ -31,9 +31,7 @@ struct MaterialProperty {
     }
 
     PropertyTypeInfo type() {
-        import std.conv : to;
-
-        return prop.mType.to!PropertyTypeInfo;
+        return prop.mType.toEnum!PropertyTypeInfo;
     }
 
     uint semantic() { // used for only texture property

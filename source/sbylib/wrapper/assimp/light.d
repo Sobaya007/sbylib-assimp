@@ -1,8 +1,8 @@
 module sbylib.wrapper.assimp.light;
 
-import derelict.assimp3.types;
+import bindbc.assimp.types;
 import sbylib.wrapper.assimp.constants : LightSourceType;
-import sbylib.wrapper.assimp.functions : toRegularString, toSbylibVector;
+import sbylib.wrapper.assimp.functions : toRegularString, toSbylibVector, toEnum;
 import sbylib.math : vec3, vec2;
 
 struct Light {
@@ -14,9 +14,7 @@ struct Light {
     }
 
     LightSourceType type() {
-        import std.conv : to;
-
-        return light.mType.to!LightSourceType;
+        return light.mType.toEnum!LightSourceType;
     }
 
     vec3 position() {

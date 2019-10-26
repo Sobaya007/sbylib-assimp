@@ -1,91 +1,91 @@
 module sbylib.wrapper.assimp.constants;
 
-import derelict.assimp3.types;
+import bindbc.assimp.types;
 
 enum ImporterFlag {
-    SupportTextFlavour = aiImporterFlags_SupportTextFlavour,
-    SupportBinaryFlavour = aiImporterFlags_SupportBinaryFlavour,
-    SupportCompressedFlavour = aiImporterFlags_SupportCompressedFlavour,
-    LimitedSupport = aiImporterFlags_LimitedSupport,
-    Experimental = aiImporterFlags_Experimental,
+    SupportTextFlavour = aiImporterFlags.SupportTextFlavour,
+    SupportBinaryFlavour = aiImporterFlags.SupportBinaryFlavour,
+    SupportCompressedFlavour = aiImporterFlags.SupportCompressedFlavour,
+    LimitedSupport = aiImporterFlags.LimitedSupport,
+    Experimental = aiImporterFlags.Experimental,
 }
 
 enum PostProcessFlag {
     None = 0,
-    CalcTangentSpace = aiProcess_CalcTangentSpace,
-    JoinIdenticalVertices = aiProcess_JoinIdenticalVertices,
-    MakeLeftHanded = aiProcess_MakeLeftHanded,
-    Triangulate = aiProcess_Triangulate,
-    RemoveComponent = aiProcess_RemoveComponent,
-    GenNormals = aiProcess_GenNormals,
-    GenSmoothNormals = aiProcess_GenSmoothNormals,
-    SplitLargeMeshes = aiProcess_SplitLargeMeshes,
-    PreTransformVertices = aiProcess_PreTransformVertices,
-    LimitBoneWeights = aiProcess_LimitBoneWeights,
-    ValidateDataStructure = aiProcess_ValidateDataStructure,
-    ImproveCacheLocality = aiProcess_ImproveCacheLocality,
-    RemoveRedundantMaterials = aiProcess_RemoveRedundantMaterials,
-    FixInFacingNormals = aiProcess_FixInFacingNormals,
-    SortByPType = aiProcess_SortByPType,
-    FindDegenerates = aiProcess_FindDegenerates,
-    FindInvalidData = aiProcess_FindInvalidData,
-    GenUVCoords = aiProcess_GenUVCoords,
-    TransformUVCoords = aiProcess_TransformUVCoords,
-    FindInstances = aiProcess_FindInstances,
-    OptimizeMeshes = aiProcess_OptimizeMeshes,
-    OptimizeGraph = aiProcess_OptimizeGraph,
-    FlipUVs = aiProcess_FlipUVs,
-    FlipWindingOrder = aiProcess_FlipWindingOrder,
-    SplitByBoneCount = aiProcess_SplitByBoneCount,
-    Debone = aiProcess_Debone,
-    ConvertToLeftHanded = aiProcess_ConvertToLeftHanded,
-    TargetRealtime_Fast = aiProcessPreset_TargetRealtime_Fast,
-    TargetRealtime_Quality = aiProcessPreset_TargetRealtime_Quality,
-    TargetRealtime_MaxQuality = aiProcessPreset_TargetRealtime_MaxQuality
+    CalcTangentSpace = aiPostProcessSteps.CalcTangentSpace,
+    JoinIdenticalVertices = aiPostProcessSteps.JoinIdenticalVertices,
+    MakeLeftHanded = aiPostProcessSteps.MakeLeftHanded,
+    Triangulate = aiPostProcessSteps.Triangulate,
+    RemoveComponent = aiPostProcessSteps.RemoveComponent,
+    GenNormals = aiPostProcessSteps.GenNormals,
+    GenSmoothNormals = aiPostProcessSteps.GenSmoothNormals,
+    SplitLargeMeshes = aiPostProcessSteps.SplitLargeMeshes,
+    PreTransformVertices = aiPostProcessSteps.PreTransformVertices,
+    LimitBoneWeights = aiPostProcessSteps.LimitBoneWeights,
+    ValidateDataStructure = aiPostProcessSteps.ValidateDataStructure,
+    ImproveCacheLocality = aiPostProcessSteps.ImproveCacheLocality,
+    RemoveRedundantMaterials = aiPostProcessSteps.RemoveRedundantMaterials,
+    FixInFacingNormals = aiPostProcessSteps.FixInfacingNormals,
+    SortByPType = aiPostProcessSteps.SortByPType,
+    FindDegenerates = aiPostProcessSteps.FindDegenerates,
+    FindInvalidData = aiPostProcessSteps.FindInvalidData,
+    GenUVCoords = aiPostProcessSteps.GenUVCoords,
+    TransformUVCoords = aiPostProcessSteps.TransformUVCoords,
+    FindInstances = aiPostProcessSteps.FindInstances,
+    OptimizeMeshes = aiPostProcessSteps.OptimizeMeshes,
+    OptimizeGraph = aiPostProcessSteps.OptimizeGraph,
+    FlipUVs = aiPostProcessSteps.FlipUVs,
+    FlipWindingOrder = aiPostProcessSteps.FlipWindingOrder,
+    SplitByBoneCount = aiPostProcessSteps.SplitByBoneCount,
+    Debone = aiPostProcessSteps.Debone,
+    ConvertToLeftHanded = aiPostProcessSteps.ConvertToLeftHanded,
+    TargetRealtime_Fast = aiPostProcessStepsPreset.TargetRealtime_Fast,
+    TargetRealtime_Quality = aiPostProcessStepsPreset.TargetRealtime_Quality,
+    TargetRealtime_MaxQuality = aiPostProcessStepsPreset.TargetRealtime_MaxQuality
 }
 
 enum DefaultLogStream {
-    File = aiDefaultLogStream_FILE,
-    Stdout = aiDefaultLogStream_STDOUT,
-    Stderr = aiDefaultLogStream_STDERR,
-    Debugger = aiDefaultLogStream_DEBUGGER,
+    File = aiDefaultLogStream.FILE,
+    Stdout = aiDefaultLogStream.STDOUT,
+    Stderr = aiDefaultLogStream.STDERR,
+    Debugger = aiDefaultLogStream.DEBUGGER,
 }
 
 enum MetaDataType {
-    Bool = AI_BOOL,
-    Int = AI_INT,
-    Ulong = AI_UINT64,
-    Float = AI_FLOAT,
-    String = AI_AISTRING,
-    Vec3 = AI_AIVECTOR3D,
+    Bool = aiMetadataType.BOOL,
+    Int = aiMetadataType.INT32,
+    Ulong = aiMetadataType.UINT64,
+    Float = aiMetadataType.FLOAT,
+    String = aiMetadataType.STRING,
+    Vec3 = aiMetadataType.VECTOR3D,
 }
 
 enum PrimitiveType {
-    Point = aiPrimitiveType_POINT,
-    Line = aiPrimitiveType_LINE,
-    Triangle = aiPrimitiveType_TRIANGLE,
-    Polygon = aiPrimitiveType_POLYGON,
+    Point = aiPrimitiveType.POINT,
+    Line = aiPrimitiveType.LINE,
+    Triangle = aiPrimitiveType.TRIANGLE,
+    Polygon = aiPrimitiveType.POLYGON,
 }
 
 enum PropertyTypeInfo {
-    Float = aiPTI_Float,
-    String = aiPTI_String,
-    Integer = aiPTI_Integer,
-    Buffer = aiPTI_Buffer,
+    Float = aiPropertyTypeInfo.Float,
+    String = aiPropertyTypeInfo.String,
+    Integer = aiPropertyTypeInfo.Integer,
+    Buffer = aiPropertyTypeInfo.Buffer,
 }
 
 enum AnimBehaviour {
-    Default = aiAnimBehaviour_DEFAULT,
-    Constant = aiAnimBehaviour_CONSTANT,
-    Linear = aiAnimBehaviour_LINEAR,
-    Repeat = aiAnimBehaviour_REPEAT,
+    Default = aiAnimBehaviour.DEFAULT,
+    Constant = aiAnimBehaviour.CONSTANT,
+    Linear = aiAnimBehaviour.LINEAR,
+    Repeat = aiAnimBehaviour.REPEAT,
 }
 
 enum LightSourceType {
-    Undefined = aiLightSourceType_UNDEFINED,
-    Diredctional = aiLightSourceType_DIRECTIONAL,
-    Point = aiLightSourceType_POINT,
-    Spot = aiLightSourceType_SPOT,
-    Ambient = aiLightSourceType_AMBIENT,
-    Area = aiLightSource_AREA,
+    Undefined = aiLightSourceType.UNDEFINED,
+    Diredctional = aiLightSourceType.DIRECTIONAL,
+    Point = aiLightSourceType.POINT,
+    Spot = aiLightSourceType.SPOT,
+    Ambient = aiLightSourceType.AMBIENT,
+    Area = aiLightSourceType.AREA,
 }

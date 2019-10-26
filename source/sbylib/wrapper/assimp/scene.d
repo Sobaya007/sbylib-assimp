@@ -1,7 +1,6 @@
 module sbylib.wrapper.assimp.scene;
 
-import derelict.assimp3.assimp;
-import derelict.assimp3.types;
+import bindbc.assimp;
 import sbylib.wrapper.assimp.constants : PostProcessFlag;
 import sbylib.wrapper.assimp.functions : toArray, indent;
 import sbylib.wrapper.assimp.node : Node;

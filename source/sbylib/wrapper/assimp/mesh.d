@@ -1,6 +1,6 @@
 module sbylib.wrapper.assimp.mesh;
 
-import derelict.assimp3.types;
+import bindbc.assimp.types;
 import sbylib.wrapper.assimp.constants : PrimitiveType;
 import sbylib.wrapper.assimp.functions : toSbylibVector, toRegularString, toArray;
 import sbylib.wrapper.assimp.face : Face;
